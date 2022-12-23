@@ -20,6 +20,10 @@ organization_uuid = client.organization_uuid
 ```
 current_user = client.get_current_user()
 ```
+#### Get Scheduled Event
+```
+event = client.get_scheduled_event(event_uuid)
+```
 ### Webhooks
 #### Create webhook
 ```

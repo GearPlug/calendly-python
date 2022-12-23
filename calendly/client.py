@@ -21,6 +21,9 @@ class Client(object):
     def get_current_user(self):
         return self.get('users/me')
 
+    def get_scheduled_event(self, event_uuid):
+        return self.get(f'scheduled_events/{event_uuid}')
+
     def create_webhook(self, url, events, organization_uri, user_uri, scope):
         body = {
             "url": url,
