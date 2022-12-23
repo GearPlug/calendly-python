@@ -33,3 +33,7 @@ webhooks = client.list_webhooks(self, scope, organization_uri, user_uri=None)
 # scope: two options: "user" or "organization"
 # Note: must send user_uri if scope = "user"
 ```
+#### Delete webhook
+ ```
+client.delete_webhook(webhook_uuid)
+ ```

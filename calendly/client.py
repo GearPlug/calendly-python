@@ -35,7 +35,13 @@ class Client(object):
         params = {"scope": scope, "organization": organization_uri}
         if scope == "user":
             params.update(user=user_uri)
-        return self.get('webhook_subscriptions',params=params)
+        webhooks = self.get('webhook_subscriptions',params=params)["collection"]
+        for webhook in webhooks:
+            webhook["uuid"] = webhook["uri"].split("/")[-1]
+        return webhooks
+
+    def delete_webhook(self, webhook_uuid):
+        return self.delete(f'webhook_subscriptions/{webhook_uuid}')
 
     def get(self, endpoint, params=None):
         response = self.request('GET', endpoint, params=params)
