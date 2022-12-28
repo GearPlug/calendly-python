@@ -21,12 +21,14 @@ class Client(object):
         if access_token:
             self.set_token(access_token)
 
-    def authorization_url(self):
+    def authorization_url(self, state=None):
         params = {
             'client_id': self.CLIENT_ID,
             'redirect_uri': self.REDIRECT_URI,
             'response_type': 'code',
         }
+        if state:
+            params['state'] = state
         return self.URL + self.AUTH_ENDPOINT + urlencode(params)
 
     def get_access_token(self, code):
