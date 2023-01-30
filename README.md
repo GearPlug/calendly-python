@@ -1,3 +1,4 @@
+![](https://img.shields.io/badge/version-0.1.0-success) ![](https://img.shields.io/badge/code-Python-4B8BBE?logo=python&logoColor=white)
 # calendly-python
 
 calendly-python is an API wrapper for Calendly, written in Python
