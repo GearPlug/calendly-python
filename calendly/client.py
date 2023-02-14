@@ -29,7 +29,7 @@ class Client(object):
         }
         if state:
             params['state'] = state
-        return self.URL + self.AUTH_ENDPOINT + urlencode(params)
+        return self.AUTH_URL + self.AUTH_ENDPOINT + urlencode(params)
 
     def get_access_token(self, code):
         params = {
