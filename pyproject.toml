@@ -2,7 +2,7 @@
 name = "calendly-python"
 version = "0.1.2"
 description = "API wrapper for Calendly written in Python"
-authors = ["Miguel Ferrer <ingferrermiguel@gmail.com>"]
+authors = ["Juan Carlos Rios <juankrios15@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "calendly"}]
