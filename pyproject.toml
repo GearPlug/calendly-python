@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "calendly-python"
+version = "0.1.2"
+description = "API wrapper for Calendly written in Python"
+authors = ["Miguel Ferrer <ingferrermiguel@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "calendly"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.26.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
