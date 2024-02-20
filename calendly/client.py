@@ -52,7 +52,7 @@ class Client(object):
             'grant_type': 'authorization_code',
             'refresh_token': refresh_token
         } 
-        return self.post('oauth/token', params=params, data=body, auth_url=True)
+        return self.post('oauth/revoke', params=params, data=body, auth_url=True)
         
     def set_token(self, access_token):
         self.headers.update(Authorization=f"Bearer {access_token}")
