@@ -28,17 +28,17 @@ client = Client(client_id="client_id", client_secret="client_secret", redirect_u
 ```
 url = client.authorization_url()
 ```
-3. Get access token using code
+3. Paste the URL, copy the "code" from the new URL, and use it to get the access token.
 ```
 response = client.get_access_token(code)
 ```
 4. Set access token
 ```
-client.set_token(access_token)
+client.set_token(response["access_token"])
 ```
 If your access token expired, you can get a new one using refresh_token:
 ```
-response = client.refresh_access_token(refresh_token)
+client.refresh_access_token(response["refresh_token"])
 ```
 And then set access token again...
 #### Current User
