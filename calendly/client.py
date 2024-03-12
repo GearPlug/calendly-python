@@ -68,6 +68,9 @@ class Client(object):
 
     def get_scheduled_event(self, event_uuid):
         return self.get(f'scheduled_events/{event_uuid}')
+    
+    def get_user_availability(self):
+        return self.get(f'user_availability_schedules', params={"user": self.user_uri})
 
     def create_webhook(self, url, events, organization_uri, user_uri, scope):
         body = {
